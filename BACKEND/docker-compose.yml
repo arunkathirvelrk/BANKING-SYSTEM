@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  mysql-auth:
+    image: mysql:8.0
+    container_name: mysql-auth
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: banking_auth_db
+    ports:
+      - "3306:3306"
+    networks:
+      - banking-network
+
+  mysql-user:
+    image: mysql:8.0
+    container_name: mysql-user
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: banking_user_db
+    ports:
+      - "3307:3306"
+    networks:
+      - banking-network
+
+  mysql-account:
+    image: mysql:8.0
+    container_name: mysql-account
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: banking_account_db
+    ports:
+      - "3308:3306"
+    networks:
+      - banking-network
+
+  mysql-transaction:
+    image: mysql:8.0
+    container_name: mysql-transaction
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: banking_transaction_db
+    ports:
+      - "3309:3306"
+    networks:
+      - banking-network
+
+  mysql-notification:
+    image: mysql:8.0
+    container_name: mysql-notification
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: banking_notification_db
+    ports:
+      - "3310:3306"
+    networks:
+      - banking-network
+
+networks:
+  banking-network:
+    driver: bridge
