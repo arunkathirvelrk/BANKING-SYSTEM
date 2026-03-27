@@ -58,19 +58,3 @@ A key feature of this project is **real-time transaction monitoring with basic f
 * Understanding of **real-world banking workflows**
 * Building **scalable backend systems with Spring Boot**
 * Integrating **frontend and backend systems**
-
----
-
-## ▶️ How to Run (Basic)
-
-1. Start MySQL database
-2. Run each backend service (Spring Boot apps)
-3. Start API Gateway
-4. Run frontend (React app)
-5. Access application via browser
-
----
-
-## 📌 Note
-
-This project is built for learning purposes to understand how modern banking systems and microservices-based applications work.
